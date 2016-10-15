@@ -24,6 +24,19 @@ class ViewSettingsController: UIViewController {
         let newBackButton = UIBarButtonItem(title: "Back", style: UIBarButtonItemStyle.Plain, target: self, action: #selector(ViewSettingsController.back(_:)))
         self.navigationItem.leftBarButtonItem = newBackButton;
         //End Custom Back Button
+        
+        //Retrieve from defaults
+        let defaults = NSUserDefaults.standardUserDefaults()
+        let jsonSettings = defaults.objectForKey("jsonSettings") as? NSDictionary
+        
+        
+        genericList.text = jsonSettings?.valueForKey("GenericListLink") as? String
+        dateList.text = jsonSettings?.valueForKey("DateListLink") as? String
+        testomonialCloudLink.text = jsonSettings?.valueForKey("TestomonialCloudLink") as? String
+        linkingDetailsPassword.text = jsonSettings?.valueForKey("LinkingDetailsPassword") as? String
+        
+        jsonSettings?.valueForKey("LinkingDetailsPassword")
+
     }
     
     func back(sender: UIBarButtonItem) {
