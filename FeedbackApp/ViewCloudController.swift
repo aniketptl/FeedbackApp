@@ -47,6 +47,19 @@ class ViewCloudController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        cloud1av.layer.borderWidth = 3
+        cloud1av.layer.borderColor = UIColor.whiteColor().CGColor
+        cloud2av.layer.borderWidth = 3
+        cloud2av.layer.borderColor = UIColor.whiteColor().CGColor
+        cloud3av.layer.borderWidth = 3
+        cloud3av.layer.borderColor = UIColor.whiteColor().CGColor
+        cloud4av.layer.borderWidth = 3
+        cloud4av.layer.borderColor = UIColor.whiteColor().CGColor
+        cloud5av.layer.borderWidth = 3
+        cloud5av.layer.borderColor = UIColor.whiteColor().CGColor
+        cloud6av.layer.borderWidth = 3
+        cloud6av.layer.borderColor = UIColor.whiteColor().CGColor
     }
 
 }
