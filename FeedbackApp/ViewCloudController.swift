@@ -121,6 +121,16 @@ class ViewCloudController: UIViewController {
 
     }
     
+    override func viewWillAppear(animated: Bool) {
+        settings.hidden = true
+        cloud1.alpha = 0.0
+        cloud2.alpha = 0.0
+        cloud3.alpha = 0.0
+        cloud4.alpha = 0.0
+        cloud5.alpha = 0.0
+        cloud6.alpha = 0.0
+    }
+    
     func animateTheClouds(cloud : UIView) {
         
         let cloudMovingSpeed = 34.4/view.frame.size.width
