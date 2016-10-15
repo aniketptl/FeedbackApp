@@ -20,18 +20,6 @@
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="BFg-mI-Se9">
                                 <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Digital Experience Zone" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3qF-hF-sKT">
-                                        <rect key="frame" x="26" y="28" width="432" height="58"/>
-                                        <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="35"/>
-                                        <color key="textColor" red="0.36078431370000003" green="0.70196078429999997" blue="0.8980392157" alpha="1" colorSpace="calibratedRGB"/>
-                                        <color key="highlightedColor" red="0.40000000600000002" green="0.80000001190000003" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                    </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Feedback" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="biJ-7X-4jy">
-                                        <rect key="frame" x="26" y="85" width="143" height="32"/>
-                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="30"/>
-                                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
                                     <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Enter Your Company" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="TJg-ra-xxb" customClass="SearchTextField" customModule="FeedbackApp" customModuleProvider="target">
                                         <rect key="frame" x="26" y="291" width="524" height="70"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="30"/>
@@ -81,9 +69,6 @@
                                         <state key="normal" title="Submit">
                                             <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                         </state>
-                                        <connections>
-                                            <action selector="submit:" destination="2fh-Fz-abV" eventType="touchUpInside" id="h74-h5-d8N"/>
-                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0PC-xT-yHL">
                                         <rect key="frame" x="830" y="654" width="161" height="95"/>
@@ -95,10 +80,13 @@
                                         <state key="normal" title="Submit">
                                             <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                         </state>
-                                        <connections>
-                                            <action selector="submitHidden:" destination="2fh-Fz-abV" eventType="touchUpInside" id="8Ui-uF-kQX"/>
-                                        </connections>
                                     </button>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Feedback" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="biJ-7X-4jy">
+                                        <rect key="frame" x="26" y="68" width="143" height="32"/>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="30"/>
+                                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
                                 </subviews>
                             </scrollView>
                             <view contentMode="scaleAspectFit" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="oLc-CN-OvF" customClass="activityIndicator" customModule="FeedbackApp" customModuleProvider="target">
@@ -127,13 +115,13 @@
                     <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="iPad"/>
                     <connections>
-                        <outlet property="ClientList" destination="DTF-Go-pGQ" id="cD4-5u-kPC"/>
-                        <outlet property="Comments" destination="hdZ-op-PH3" id="RcQ-rb-QTB"/>
-                        <outlet property="CompanyList" destination="TJg-ra-xxb" id="koI-GZ-jTd"/>
+                        <outlet property="ClientList" destination="DTF-Go-pGQ" id="g2Z-Ky-acb"/>
+                        <outlet property="Comments" destination="hdZ-op-PH3" id="dt4-7f-y0E"/>
+                        <outlet property="CompanyList" destination="TJg-ra-xxb" id="MWd-pW-eMH"/>
                         <outlet property="ScrollView" destination="BFg-mI-Se9" id="Oap-vf-70e"/>
+                        <outlet property="Submit" destination="9bF-0R-etq" id="KP3-b8-Qjp"/>
+                        <outlet property="SubmitHidden" destination="xzT-uk-DnK" id="G4L-eI-GK0"/>
                         <outlet property="indicator" destination="oLc-CN-OvF" id="kPt-gL-6QZ"/>
-                        <outlet property="submit" destination="9bF-0R-etq" id="krZ-GO-4wx"/>
-                        <outlet property="submitHidden" destination="xzT-uk-DnK" id="Tf7-BQ-6An"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="I9k-s3-STe" sceneMemberID="firstResponder"/>

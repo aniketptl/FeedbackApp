@@ -14,6 +14,11 @@
 		1F72F5D31DB200EB00BDD3AF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1F72F5D11DB200EB00BDD3AF /* LaunchScreen.storyboard */; };
 		1F72F5DE1DB200EB00BDD3AF /* FeedbackAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F72F5DD1DB200EB00BDD3AF /* FeedbackAppTests.swift */; };
 		1F72F5E91DB200EB00BDD3AF /* FeedbackAppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F72F5E81DB200EB00BDD3AF /* FeedbackAppUITests.swift */; };
+		1F72F5FB1DB2028200BDD3AF /* Reach.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F72F5F61DB2028200BDD3AF /* Reach.swift */; };
+		1F72F5FC1DB2028200BDD3AF /* SwiftyAvatar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F72F5F71DB2028200BDD3AF /* SwiftyAvatar.swift */; };
+		1F72F5FD1DB2028200BDD3AF /* HRToast+UIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F72F5F81DB2028200BDD3AF /* HRToast+UIView.swift */; };
+		1F72F5FE1DB2028200BDD3AF /* SearchTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F72F5F91DB2028200BDD3AF /* SearchTextField.swift */; };
+		1F72F5FF1DB2028200BDD3AF /* AutocompleteField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F72F5FA1DB2028200BDD3AF /* AutocompleteField.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,6 +52,11 @@
 		1F72F5E41DB200EB00BDD3AF /* FeedbackAppUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FeedbackAppUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		1F72F5E81DB200EB00BDD3AF /* FeedbackAppUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedbackAppUITests.swift; sourceTree = "<group>"; };
 		1F72F5EA1DB200EB00BDD3AF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		1F72F5F61DB2028200BDD3AF /* Reach.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Reach.swift; sourceTree = "<group>"; };
+		1F72F5F71DB2028200BDD3AF /* SwiftyAvatar.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwiftyAvatar.swift; sourceTree = "<group>"; };
+		1F72F5F81DB2028200BDD3AF /* HRToast+UIView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "HRToast+UIView.swift"; sourceTree = "<group>"; };
+		1F72F5F91DB2028200BDD3AF /* SearchTextField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchTextField.swift; sourceTree = "<group>"; };
+		1F72F5FA1DB2028200BDD3AF /* AutocompleteField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AutocompleteField.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -97,6 +107,11 @@
 		1F72F5C71DB200EB00BDD3AF /* FeedbackApp */ = {
 			isa = PBXGroup;
 			children = (
+				1F72F5F61DB2028200BDD3AF /* Reach.swift */,
+				1F72F5F71DB2028200BDD3AF /* SwiftyAvatar.swift */,
+				1F72F5F81DB2028200BDD3AF /* HRToast+UIView.swift */,
+				1F72F5F91DB2028200BDD3AF /* SearchTextField.swift */,
+				1F72F5FA1DB2028200BDD3AF /* AutocompleteField.swift */,
 				1F72F5C81DB200EB00BDD3AF /* AppDelegate.swift */,
 				1F72F5CA1DB200EB00BDD3AF /* ViewController.swift */,
 				1F72F5CC1DB200EB00BDD3AF /* Main.storyboard */,
@@ -257,7 +272,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				1F72F5CB1DB200EB00BDD3AF /* ViewController.swift in Sources */,
+				1F72F5FD1DB2028200BDD3AF /* HRToast+UIView.swift in Sources */,
+				1F72F5FF1DB2028200BDD3AF /* AutocompleteField.swift in Sources */,
+				1F72F5FB1DB2028200BDD3AF /* Reach.swift in Sources */,
+				1F72F5FC1DB2028200BDD3AF /* SwiftyAvatar.swift in Sources */,
 				1F72F5C91DB200EB00BDD3AF /* AppDelegate.swift in Sources */,
+				1F72F5FE1DB2028200BDD3AF /* SearchTextField.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

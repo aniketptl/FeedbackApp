@@ -10,6 +10,13 @@ import UIKit
 
 class ViewController: UIViewController {
 
+    @IBOutlet weak var ClientList: SearchTextField!
+    @IBOutlet weak var CompanyList: SearchTextField!
+    @IBOutlet weak var Comments: AutocompleteField!
+    
+    @IBOutlet weak var Submit: UIButton!
+    @IBOutlet weak var SubmitHidden: UIButton!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
