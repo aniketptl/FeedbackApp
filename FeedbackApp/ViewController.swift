@@ -422,6 +422,32 @@ class ViewController: UIViewController,UITextFieldDelegate,UIGestureRecognizerDe
         _ = NSURLConnection(request: request, delegate: nil, startImmediately: true)
     }
     //Send To Google Form End
+    
+    func textFieldShouldReturn(textField: UITextField) -> Bool {
+        
+        /* Sets text from autocomplete when pressing return */
+        if let field = textField as? AutocompleteField
+        {
+            field.text = field.suggestion
+        }
+        
+        textField.resignFirstResponder()
+        return true
+        
+    }
+    
+    func textFieldDidBeginEditing(textField: UITextField) {
+        
+        if(textField==Comments)
+        {
+            ScrollView.setContentOffset(CGPointMake(0,250), animated: true)
+        }
+        
+    }
+    
+    func textFieldDidEndEditing(textField: UITextField) {
+        <#code#>
+    }
 
 
 }
