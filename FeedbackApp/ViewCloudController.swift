@@ -37,13 +37,13 @@ class ViewCloudController: UIViewController {
     
     //Buttons
     @IBOutlet weak var settings: UIButton!
-    @IBOutlet weak var tietoLogo: UIButton!
     
     
     private var keys : [String] = []
     private var values : [String] = []
     
     private var testomonialLink: String!
+    @IBOutlet weak var logo: UIButton!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -60,6 +60,20 @@ class ViewCloudController: UIViewController {
         cloud5av.layer.borderColor = UIColor.whiteColor().CGColor
         cloud6av.layer.borderWidth = 3
         cloud6av.layer.borderColor = UIColor.whiteColor().CGColor
+        
+        let tapGestureRecognizer: UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: "handleTapGesture:")
+        tapGestureRecognizer.numberOfTapsRequired = 3
+        
+        self.logo.addGestureRecognizer(tapGestureRecognizer)
+    }
+    
+    override func viewDidAppear(animated: Bool) {
+        
+        //Getting Testomonial Link
+        let defaults = NSUserDefaults.standardUserDefaults()
+        let jsonSettings = defaults.objectForKey("jsonSettings") as? NSDictionary
+        self.testomonialLink = jsonSettings?.valueForKey("TestomonialCloudLink") as? String
+
     }
 
 }

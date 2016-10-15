@@ -401,6 +401,7 @@
                         <outlet property="cloud6" destination="Blu-2m-AZA" id="aqx-vM-ook"/>
                         <outlet property="cloud6av" destination="D9J-nI-qiV" id="OdO-zh-hkJ"/>
                         <outlet property="cloud6txt" destination="Jn2-cv-iVf" id="NVL-Dm-kc8"/>
+                        <outlet property="logo" destination="CGh-l9-EzX" id="wL5-Mx-z5N"/>
                         <outlet property="settings" destination="JaD-YS-ocM" id="BoJ-YH-2lZ"/>
                         <outlet property="tietoLogo" destination="CGh-l9-EzX" id="GnN-fM-B73"/>
                     </connections>
