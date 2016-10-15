@@ -441,6 +441,16 @@ class ViewController: UIViewController,UITextFieldDelegate,UIGestureRecognizerDe
         if(textField==Comments)
         {
             ScrollView.setContentOffset(CGPointMake(0,250), animated: true)
+            
+            SubmitHidden.alpha = 1.0
+            SubmitHidden.transform = CGAffineTransformMakeScale(0.01, 0.01)
+            
+            UIView.animateWithDuration(0.3, delay: 0.0, options: UIViewAnimationOptions.CurveEaseOut, animations: {
+                self.SubmitHidden.alpha = 1.0
+                self.SubmitHidden.transform = CGAffineTransformIdentity
+                }, completion: nil)
+            
+            Submit.alpha = 0.0
         }
         
     }
