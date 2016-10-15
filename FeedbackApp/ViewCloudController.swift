@@ -131,6 +131,19 @@ class ViewCloudController: UIViewController {
         cloud6.alpha = 0.0
     }
     
+    override func viewWillDisappear(animated: Bool) {
+        
+        self.view.layer.removeAllAnimations()
+        
+        dispatch_async(dispatch_get_main_queue(), {self.cloud1.alpha = 0.0
+            self.cloud2.alpha = 0.0
+            self.cloud3.alpha = 0.0
+            self.cloud4.alpha = 0.0
+            self.cloud5.alpha = 0.0
+            self.cloud6.alpha = 0.0})
+        
+    }
+    
     func animateTheClouds(cloud : UIView) {
         
         let cloudMovingSpeed = 34.4/view.frame.size.width
