@@ -436,6 +436,23 @@ class ViewController: UIViewController,UITextFieldDelegate,UIGestureRecognizerDe
         
     }
     
+    func gestureRecognizer(gestureRecognizer: UIGestureRecognizer, shouldReceiveTouch touch: UITouch) -> Bool
+    {
+        
+        if touch.view != nil && touch.view!.isDescendantOfView(self.ClientList.tableView!)
+        {
+            return false
+        }
+        
+        if touch.view != nil && touch.view!.isDescendantOfView(self.CompanyList.tableView!)
+        {
+            return false
+        }
+        
+        return true
+        
+    }
+    
     func textFieldDidBeginEditing(textField: UITextField) {
         
         if(textField==Comments)
