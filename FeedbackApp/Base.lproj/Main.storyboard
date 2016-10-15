@@ -172,9 +172,6 @@
                                 <state key="normal" title="Button" image="tietoOfficalSmall">
                                     <color key="titleShadowColor" red="0.26073717950000003" green="0.26073717950000003" blue="0.26073717950000003" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
-                                <connections>
-                                    <action selector="tietoLogo:" destination="3r1-bZ-faq" eventType="touchUpInside" id="NwR-18-Oha"/>
-                                </connections>
                             </button>
                             <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Krj-a9-J0b" userLabel="cloud5">
                                 <rect key="frame" x="661" y="493" width="423" height="223"/>
@@ -375,6 +372,9 @@
                                 <state key="normal" title="Details">
                                     <color key="titleColor" red="0.36078431370000003" green="0.70196078429999997" blue="0.8980392157" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
+                                <connections>
+                                    <segue destination="T2P-M9-w0h" kind="show" id="uic-6T-vxV"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
@@ -403,12 +403,85 @@
                         <outlet property="cloud6txt" destination="Jn2-cv-iVf" id="NVL-Dm-kc8"/>
                         <outlet property="logo" destination="CGh-l9-EzX" id="wL5-Mx-z5N"/>
                         <outlet property="settings" destination="JaD-YS-ocM" id="BoJ-YH-2lZ"/>
-                        <outlet property="tietoLogo" destination="CGh-l9-EzX" id="GnN-fM-B73"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="5I5-29-Cm9" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2190" y="643"/>
+        </scene>
+        <!--ViewPasswordController-->
+        <scene sceneID="iSM-PF-QIz">
+            <objects>
+                <viewController storyboardIdentifier="ViewPasswordController" automaticallyAdjustsScrollViewInsets="NO" id="T2P-M9-w0h" userLabel="ViewPasswordController" customClass="ViewPasswordController" customModule="TietoFeedback" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="voE-Ak-iTq"/>
+                        <viewControllerLayoutGuide type="bottom" id="JDh-WB-u8s"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="tis-u5-nfD">
+                        <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="j11-hV-Ki9">
+                                <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
+                                <subviews>
+                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Enter Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ick-Ry-siV" userLabel="loginpassword">
+                                        <rect key="frame" x="234" y="362" width="563" height="58"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                        <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
+                                        <connections>
+                                            <outlet property="delegate" destination="T2P-M9-w0h" id="VX9-CH-4hY"/>
+                                        </connections>
+                                    </textField>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Linking Details " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nhG-EZ-rAi">
+                                        <rect key="frame" x="234" y="300" width="292" height="43"/>
+                                        <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="30"/>
+                                        <color key="textColor" red="0.36078431370000003" green="0.70196078429999997" blue="0.8980392157" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Please Enter Correct Password" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YQx-NV-ENE">
+                                        <rect key="frame" x="234" y="428" width="403" height="21"/>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="25"/>
+                                        <color key="textColor" red="0.36078431370000003" green="0.70196078429999997" blue="0.8980392157" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eUu-am-iIg">
+                                        <rect key="frame" x="234" y="471" width="134" height="48"/>
+                                        <color key="backgroundColor" red="0.36078431370000003" green="0.70196078429999997" blue="0.8980392157" alpha="1" colorSpace="calibratedRGB"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                        <state key="normal" title="Login">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="login:" destination="T2P-M9-w0h" eventType="touchUpInside" id="ojO-bA-GNu"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </scrollView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="j11-hV-Ki9" firstAttribute="height" secondItem="tis-u5-nfD" secondAttribute="height" id="gzU-vH-y3F"/>
+                            <constraint firstItem="j11-hV-Ki9" firstAttribute="width" secondItem="tis-u5-nfD" secondAttribute="width" id="ksC-Ui-KGG"/>
+                        </constraints>
+                    </view>
+                    <value key="contentSizeForViewInPopover" type="size" width="300" height="320"/>
+                    <simulatedStatusBarMetrics key="simulatedStatusBarMetrics" statusBarStyle="lightContent"/>
+                    <nil key="simulatedTopBarMetrics"/>
+                    <nil key="simulatedBottomBarMetrics"/>
+                    <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="iPad"/>
+                    <connections>
+                        <outlet property="ScrollView" destination="j11-hV-Ki9" id="f3t-EF-1pz"/>
+                        <outlet property="enterCorrectPass" destination="YQx-NV-ENE" id="Ti2-NM-vd7"/>
+                        <outlet property="login" destination="eUu-am-iIg" id="JTr-rv-EHo"/>
+                        <outlet property="password" destination="ick-Ry-siV" id="Dad-z9-3RX"/>
+                        <segue destination="OoM-mJ-DUx" kind="unwind" identifier="unwindToViewController" unwindAction="prepareForUnwind:" id="tY7-dv-PWZ"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="kFk-nh-CC0" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <exit id="OoM-mJ-DUx" userLabel="Exit" sceneMemberID="exit"/>
+            </objects>
+            <point key="canvasLocation" x="3271" y="638"/>
         </scene>
     </scenes>
     <resources>
