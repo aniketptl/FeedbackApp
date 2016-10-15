@@ -110,9 +110,29 @@ class ViewCloudController: UIViewController {
             self.cloud6.alpha = 1.0
             self.cloud6.transform = CGAffineTransformIdentity
             }, completion: nil)
+        
+        animateTheClouds(cloud1)
+        animateTheClouds(cloud2)
+        animateTheClouds(cloud3)
+        animateTheClouds(cloud4)
+        animateTheClouds(cloud5)
+        animateTheClouds(cloud6)
 
 
     }
+    
+    func animateTheClouds(cloud : UIView) {
+        
+        let cloudMovingSpeed = 34.4/view.frame.size.width
+        let duration = (view.frame.size.width - cloud.frame.origin.x) * cloudMovingSpeed
+        UIView.animateWithDuration(NSTimeInterval(duration), delay: 0.0, options: .CurveLinear, animations: {
+            cloud.frame.origin.x = self.view.frame.size.width
+            }, completion: {_ in
+                cloud.frame.origin.x = -self.view.frame.size.width
+                self.animateTheClouds(cloud)
+        })
+    }
+    
 
 }
 
