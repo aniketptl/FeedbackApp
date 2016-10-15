@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1F34D2F11DB2148B006C727C /* ViewCloudController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F34D2F01DB2148B006C727C /* ViewCloudController.swift */; };
 		1F72F5C91DB200EB00BDD3AF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F72F5C81DB200EB00BDD3AF /* AppDelegate.swift */; };
 		1F72F5CB1DB200EB00BDD3AF /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F72F5CA1DB200EB00BDD3AF /* ViewController.swift */; };
 		1F72F5CE1DB200EB00BDD3AF /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1F72F5CC1DB200EB00BDD3AF /* Main.storyboard */; };
@@ -40,6 +41,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		1F34D2F01DB2148B006C727C /* ViewCloudController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewCloudController.swift; sourceTree = "<group>"; };
 		1F72F5C51DB200EB00BDD3AF /* FeedbackApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FeedbackApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1F72F5C81DB200EB00BDD3AF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		1F72F5CA1DB200EB00BDD3AF /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -121,6 +123,7 @@
 				1F72F5CF1DB200EB00BDD3AF /* Assets.xcassets */,
 				1F72F5D11DB200EB00BDD3AF /* LaunchScreen.storyboard */,
 				1F72F5D41DB200EB00BDD3AF /* Info.plist */,
+				1F34D2F01DB2148B006C727C /* ViewCloudController.swift */,
 			);
 			path = FeedbackApp;
 			sourceTree = "<group>";
@@ -274,6 +277,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1F34D2F11DB2148B006C727C /* ViewCloudController.swift in Sources */,
 				1F72F5CB1DB200EB00BDD3AF /* ViewController.swift in Sources */,
 				1F72F5FD1DB2028200BDD3AF /* HRToast+UIView.swift in Sources */,
 				1F72F5FF1DB2028200BDD3AF /* AutocompleteField.swift in Sources */,
@@ -508,6 +512,7 @@
 				1F72F5EF1DB200EB00BDD3AF /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		1F72F5F01DB200EB00BDD3AF /* Build configuration list for PBXNativeTarget "FeedbackAppTests" */ = {
 			isa = XCConfigurationList;
@@ -516,6 +521,7 @@
 				1F72F5F21DB200EB00BDD3AF /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		1F72F5F31DB200EB00BDD3AF /* Build configuration list for PBXNativeTarget "FeedbackAppUITests" */ = {
 			isa = XCConfigurationList;
@@ -524,6 +530,7 @@
 				1F72F5F51DB200EB00BDD3AF /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

@@ -73,9 +73,6 @@
                                             <action selector="submit:" destination="2fh-Fz-abV" eventType="touchUpInside" id="nAx-be-P92"/>
                                         </connections>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0PC-xT-yHL">
-                                        <rect key="frame" x="830" y="654" width="161" height="95"/>
-                                    </button>
                                     <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xzT-uk-DnK" userLabel="SubmitHidden">
                                         <rect key="frame" x="574" y="499" width="228" height="48"/>
                                         <color key="backgroundColor" red="0.36078431370000003" green="0.70196078429999997" blue="0.8980392157" alpha="1" colorSpace="calibratedRGB"/>
@@ -93,6 +90,12 @@
                                         <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0PC-xT-yHL">
+                                        <rect key="frame" x="17" y="36" width="161" height="95"/>
+                                        <connections>
+                                            <segue destination="3r1-bZ-faq" kind="show" id="QBA-Su-cB8"/>
+                                        </connections>
+                                    </button>
                                 </subviews>
                             </scrollView>
                             <view contentMode="scaleAspectFit" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="oLc-CN-OvF" customClass="activityIndicator" customModule="FeedbackApp" customModuleProvider="target">
@@ -152,5 +155,263 @@
             </objects>
             <point key="canvasLocation" x="269" y="559"/>
         </scene>
+        <!--View Cloud Controller-->
+        <scene sceneID="H0C-Ev-I84">
+            <objects>
+                <viewController storyboardIdentifier="ViewCloudController" id="3r1-bZ-faq" customClass="ViewCloudController" customModule="FeedbackApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="0vS-MC-6bl"/>
+                        <viewControllerLayoutGuide type="bottom" id="gKb-Cw-o6h"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="yCk-kR-q9w">
+                        <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CGh-l9-EzX">
+                                <rect key="frame" x="431" y="306" width="162" height="56"/>
+                                <state key="normal" title="Button" image="tietoOfficalSmall">
+                                    <color key="titleShadowColor" red="0.26073717950000003" green="0.26073717950000003" blue="0.26073717950000003" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="tietoLogo:" destination="3r1-bZ-faq" eventType="touchUpInside" id="NwR-18-Oha"/>
+                                </connections>
+                            </button>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Krj-a9-J0b" userLabel="cloud5">
+                                <rect key="frame" x="661" y="493" width="423" height="223"/>
+                                <subviews>
+                                    <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" image="cloudblue" translatesAutoresizingMaskIntoConstraints="NO" id="DMH-xA-hVB" userLabel="cloud5img">
+                                        <rect key="frame" x="8" y="8" width="386" height="202"/>
+                                    </imageView>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Sg0-Mg-iml" userLabel="cloud5av" customClass="SwiftyAvatar" customModule="FeedbackApp" customModuleProvider="target">
+                                        <rect key="frame" x="166" y="16" width="96" height="94"/>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="roundness">
+                                                <real key="value" value="2"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                                <real key="value" value="4"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                                <color key="value" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="spins">
+                                                <real key="value" value="1"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                    </imageView>
+                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" editable="NO" text="“Brainlink International Inc, provide a range of IT Consulting" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="0by-iw-kXL" userLabel="cloud5txt">
+                                        <rect key="frame" x="33" y="113" width="322" height="50"/>
+                                        <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                    </textView>
+                                </subviews>
+                            </view>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Blu-2m-AZA" userLabel="cloud6">
+                                <rect key="frame" x="-29" y="550" width="411" height="218"/>
+                                <subviews>
+                                    <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" image="cloudblue" translatesAutoresizingMaskIntoConstraints="NO" id="ya2-cS-aG7" userLabel="cloud6img">
+                                        <rect key="frame" x="16" y="36" width="395" height="250"/>
+                                    </imageView>
+                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="Jn2-cv-iVf" userLabel="cloud6txt">
+                                        <rect key="frame" x="42" y="160" width="339" height="58"/>
+                                        <string key="text">“Cyberoam promises security, connectivity and productivity in my customer networks. Its range of features in a single solution means a single learning curve for me as I don’t have to train or update myself with other vendor products.”</string>
+                                        <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                    </textView>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="D9J-nI-qiV" userLabel="cloud6av" customClass="SwiftyAvatar" customModule="FeedbackApp" customModuleProvider="target">
+                                        <rect key="frame" x="179" y="48" width="99" height="99"/>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="roundness">
+                                                <real key="value" value="2"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                                <real key="value" value="4"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                                <color key="value" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="spins">
+                                                <real key="value" value="1"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                    </imageView>
+                                </subviews>
+                            </view>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="F71-0n-17K" userLabel="cloud4">
+                                <rect key="frame" x="-39" y="207" width="411" height="218"/>
+                                <subviews>
+                                    <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" image="cloudblue" translatesAutoresizingMaskIntoConstraints="NO" id="nOb-Bc-ZCD" userLabel="cloud4img">
+                                        <rect key="frame" x="11" y="12" width="388" height="195"/>
+                                    </imageView>
+                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" editable="NO" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="eUN-c1-ouR" userLabel="cloud4txt">
+                                        <rect key="frame" x="57" y="107" width="297" height="60"/>
+                                        <string key="text">“Cyberoam’s achievements and recognition instill pride in me to be associated with a product that top industry analysts recognize and reward.”</string>
+                                        <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                    </textView>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="EPn-Es-ThO" userLabel="cloud4av" customClass="SwiftyAvatar" customModule="FeedbackApp" customModuleProvider="target">
+                                        <rect key="frame" x="173" y="20" width="92" height="90"/>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="roundness">
+                                                <real key="value" value="2"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                                <real key="value" value="4"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                                <color key="value" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="spins">
+                                                <real key="value" value="1"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                    </imageView>
+                                </subviews>
+                            </view>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="bix-bQ-iZw" userLabel="cloud2">
+                                <rect key="frame" x="277" y="370" width="411" height="218"/>
+                                <subviews>
+                                    <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" image="cloudblue" translatesAutoresizingMaskIntoConstraints="NO" id="XgQ-dK-hnB" userLabel="cloud2img">
+                                        <rect key="frame" x="15" y="15" width="367" height="190"/>
+                                    </imageView>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Dar-ek-3fT" userLabel="cloud2av" customClass="SwiftyAvatar" customModule="FeedbackApp" customModuleProvider="target">
+                                        <rect key="frame" x="164" y="23" width="92" height="92"/>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="roundness">
+                                                <real key="value" value="2"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                                <real key="value" value="4"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                                <color key="value" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="spins">
+                                                <real key="value" value="1"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                    </imageView>
+                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" editable="NO" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="AFQ-pv-r7K" userLabel="cloud2txt">
+                                        <rect key="frame" x="50" y="115" width="297" height="60"/>
+                                        <string key="text">“Cyberoam’s achievements and recognition instill pride in me to be associated with a product that top industry analysts recognize and reward.”</string>
+                                        <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                    </textView>
+                                </subviews>
+                            </view>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="6h8-8C-Zy9" userLabel="cloud1">
+                                <rect key="frame" x="8" y="20" width="460" height="238"/>
+                                <subviews>
+                                    <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" image="cloudblue" translatesAutoresizingMaskIntoConstraints="NO" id="MYA-ic-e68" userLabel="cloud1img">
+                                        <rect key="frame" x="0.0" y="-89" width="440" height="250"/>
+                                    </imageView>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="fPf-D2-5jd" userLabel="cloud1av" customClass="SwiftyAvatar" customModule="FeedbackApp" customModuleProvider="target">
+                                        <rect key="frame" x="310" y="109" width="92" height="92"/>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="roundness">
+                                                <real key="value" value="2"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                                <real key="value" value="4"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                                <color key="value" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="spins">
+                                                <real key="value" value="1"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                    </imageView>
+                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" editable="NO" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="kk7-qi-aKC" userLabel="cloud1txt">
+                                        <rect key="frame" x="18" y="42" width="396" height="59"/>
+                                        <string key="text">“The channel loves Cyberoam! And we have expressed our admiration for Cyberoam through host of Channel awards that Cyberoam has got.”
+</string>
+                                        <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                    </textView>
+                                </subviews>
+                            </view>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="0eo-mC-PLB" userLabel="cloud3">
+                                <rect key="frame" x="575" y="110" width="411" height="218"/>
+                                <subviews>
+                                    <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" image="cloudblue" translatesAutoresizingMaskIntoConstraints="NO" id="MPY-fN-TWQ" userLabel="cloud3img">
+                                        <rect key="frame" x="11" y="12" width="388" height="195"/>
+                                    </imageView>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Ds8-2K-arg" userLabel="cloud3av" customClass="SwiftyAvatar" customModule="FeedbackApp" customModuleProvider="target">
+                                        <rect key="frame" x="172" y="0.0" width="92" height="92"/>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="roundness">
+                                                <real key="value" value="2"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                                <real key="value" value="4"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                                <color key="value" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="spins">
+                                                <real key="value" value="1"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                    </imageView>
+                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" editable="NO" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="8lC-eh-1gI" userLabel="cloud3txt">
+                                        <rect key="frame" x="44" y="104" width="300" height="67"/>
+                                        <string key="text">
+“Cyberoam invests time and resources into building its channel resources. ”</string>
+                                        <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                    </textView>
+                                </subviews>
+                            </view>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JaD-YS-ocM">
+                                <rect key="frame" x="566" y="312" width="198" height="60"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="40"/>
+                                <state key="normal" title="Details">
+                                    <color key="titleColor" red="0.36078431370000003" green="0.70196078429999997" blue="0.8980392157" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                    </view>
+                    <simulatedStatusBarMetrics key="simulatedStatusBarMetrics" statusBarStyle="lightContent"/>
+                    <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="iPad"/>
+                    <connections>
+                        <outlet property="cloud1" destination="6h8-8C-Zy9" id="71s-u7-wyN"/>
+                        <outlet property="cloud1av" destination="fPf-D2-5jd" id="IqN-hG-aDw"/>
+                        <outlet property="cloud1txt" destination="kk7-qi-aKC" id="oV5-Aq-Xsn"/>
+                        <outlet property="cloud2" destination="bix-bQ-iZw" id="SP8-RU-m84"/>
+                        <outlet property="cloud2av" destination="Dar-ek-3fT" id="Ioh-Xh-vdj"/>
+                        <outlet property="cloud2txt" destination="AFQ-pv-r7K" id="gBc-38-PWX"/>
+                        <outlet property="cloud3" destination="Krj-a9-J0b" id="blJ-Rz-9O9"/>
+                        <outlet property="cloud3av" destination="Ds8-2K-arg" id="B6W-Wv-Msy"/>
+                        <outlet property="cloud3txt" destination="8lC-eh-1gI" id="cMH-OU-nbF"/>
+                        <outlet property="cloud4" destination="0eo-mC-PLB" id="xXJ-8L-jYy"/>
+                        <outlet property="cloud4av" destination="EPn-Es-ThO" id="etR-GR-sPT"/>
+                        <outlet property="cloud4txt" destination="eUN-c1-ouR" id="xc2-bh-1w2"/>
+                        <outlet property="cloud5" destination="F71-0n-17K" id="FFA-YW-UYr"/>
+                        <outlet property="cloud5av" destination="Sg0-Mg-iml" id="Lph-wz-qiB"/>
+                        <outlet property="cloud5txt" destination="0by-iw-kXL" id="D5x-yw-6kB"/>
+                        <outlet property="cloud6" destination="Blu-2m-AZA" id="aqx-vM-ook"/>
+                        <outlet property="cloud6av" destination="D9J-nI-qiV" id="OdO-zh-hkJ"/>
+                        <outlet property="cloud6txt" destination="Jn2-cv-iVf" id="NVL-Dm-kc8"/>
+                        <outlet property="settings" destination="JaD-YS-ocM" id="BoJ-YH-2lZ"/>
+                        <outlet property="tietoLogo" destination="CGh-l9-EzX" id="GnN-fM-B73"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="5I5-29-Cm9" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2190" y="643"/>
+        </scene>
     </scenes>
+    <resources>
+        <image name="cloudblue" width="600" height="354"/>
+        <image name="tietoOfficalSmall" width="1601" height="1505"/>
+    </resources>
 </document>
