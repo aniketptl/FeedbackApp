@@ -76,6 +76,39 @@ class ViewController: UIViewController,UITextFieldDelegate,UIGestureRecognizerDe
         /* In this it assigns the suggestions from the array and use that
          as a automcomplete text */
         Comments.suggestions=commentSuggestions;
+        
+        dispatch_async(dispatch_get_main_queue(),{
+            //UI Customization
+            /* Some of the things here like increasing the standard size of textfield with ronund rect ,is not possible through the storyboard so here is cutomization of Everythign */
+            
+            //Make Border Back to Round Type
+            self.ClientList.borderStyle=UITextBorderStyle.RoundedRect
+            self.Comments.borderStyle=UITextBorderStyle.RoundedRect
+            self.CompanyList.borderStyle=UITextBorderStyle.RoundedRect
+            
+            //ClientList.maxNumberOfResults=2;
+            
+            //Client List Customization Theme
+            self.ClientList.theme.font = UIFont.systemFontOfSize(20)
+            self.ClientList.theme.cellHeight = 80
+            self.ClientList.theme.bgColor = UIColor (red: 0.28, green: 0.28, blue: 0.28, alpha: 1.0)
+            self.ClientList.theme.fontColor=UIColor(red: 1.0, green: 1.0, blue: 1.0, alpha: 1.0)
+            self.ClientList.theme.borderColor=UIColor(red: 1.0, green: 1.0, blue: 1.0, alpha: 1.0)
+            
+            //Company List Customization Theme
+            self.CompanyList.theme.font = UIFont.systemFontOfSize(20)
+            self.CompanyList.theme.cellHeight = 80
+            self.CompanyList.theme.bgColor = UIColor (red: 0.28, green: 0.28, blue: 0.28, alpha: 1.0)
+            self.CompanyList.theme.fontColor=UIColor(red: 1.0, green: 1.0, blue: 1.0, alpha: 1.0)
+            self.CompanyList.theme.borderColor=UIColor(red: 1.0, green: 1.0, blue: 1.0, alpha: 1.0)
+            
+            self.Submit.layer.cornerRadius=6
+            self.SubmitHidden.layer.cornerRadius=6
+            
+            print("Check Settings")
+            
+        })
+
 
 
     
