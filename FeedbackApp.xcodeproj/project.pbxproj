@@ -11,6 +11,7 @@
 		1F34D2F41DB218E8006C727C /* Kingfisher.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1F34D2F21DB218B1006C727C /* Kingfisher.framework */; settings = {ATTRIBUTES = (Required, ); }; };
 		1F34D2F51DB218E8006C727C /* Kingfisher.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 1F34D2F21DB218B1006C727C /* Kingfisher.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		1F34D2F81DB21B8A006C727C /* ViewPasswordController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F34D2F71DB21B8A006C727C /* ViewPasswordController.swift */; };
+		1F34D2FA1DB21DA9006C727C /* ViewSettingsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F34D2F91DB21DA9006C727C /* ViewSettingsController.swift */; };
 		1F72F5C91DB200EB00BDD3AF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F72F5C81DB200EB00BDD3AF /* AppDelegate.swift */; };
 		1F72F5CB1DB200EB00BDD3AF /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F72F5CA1DB200EB00BDD3AF /* ViewController.swift */; };
 		1F72F5CE1DB200EB00BDD3AF /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1F72F5CC1DB200EB00BDD3AF /* Main.storyboard */; };
@@ -61,6 +62,7 @@
 		1F34D2F01DB2148B006C727C /* ViewCloudController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewCloudController.swift; sourceTree = "<group>"; };
 		1F34D2F21DB218B1006C727C /* Kingfisher.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Kingfisher.framework; sourceTree = "<group>"; };
 		1F34D2F71DB21B8A006C727C /* ViewPasswordController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewPasswordController.swift; sourceTree = "<group>"; };
+		1F34D2F91DB21DA9006C727C /* ViewSettingsController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ViewSettingsController.swift; path = ../ViewSettingsController.swift; sourceTree = "<group>"; };
 		1F72F5C51DB200EB00BDD3AF /* FeedbackApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FeedbackApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1F72F5C81DB200EB00BDD3AF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		1F72F5CA1DB200EB00BDD3AF /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -132,6 +134,7 @@
 		1F72F5C71DB200EB00BDD3AF /* FeedbackApp */ = {
 			isa = PBXGroup;
 			children = (
+				1F34D2F91DB21DA9006C727C /* ViewSettingsController.swift */,
 				1F72F6001DB207A100BDD3AF /* activityIndicator.swift */,
 				1F72F5F61DB2028200BDD3AF /* Reach.swift */,
 				1F72F5F71DB2028200BDD3AF /* SwiftyAvatar.swift */,
@@ -304,6 +307,7 @@
 				1F72F5CB1DB200EB00BDD3AF /* ViewController.swift in Sources */,
 				1F72F5FD1DB2028200BDD3AF /* HRToast+UIView.swift in Sources */,
 				1F34D2F81DB21B8A006C727C /* ViewPasswordController.swift in Sources */,
+				1F34D2FA1DB21DA9006C727C /* ViewSettingsController.swift in Sources */,
 				1F72F5FF1DB2028200BDD3AF /* AutocompleteField.swift in Sources */,
 				1F72F5FB1DB2028200BDD3AF /* Reach.swift in Sources */,
 				1F72F6011DB207A100BDD3AF /* activityIndicator.swift in Sources */,
