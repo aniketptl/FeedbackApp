@@ -41,6 +41,12 @@ class ViewController: UIViewController,UITextFieldDelegate,UIGestureRecognizerDe
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        /* Reachability. Basically checks internet connectivity */
+        let status = Reach().connectionStatus()
+        NSNotificationCenter.defaultCenter().addObserver(self, selector: Selector("networkStatusChanged:"), name: ReachabilityStatusChangedNotification, object: nil)
+        Reach().monitorReachabilityChanges()
+        
+        
         /* Keyboard Handling */
         self.tap = UITapGestureRecognizer(target: self, action: #selector(ViewController.dismissKeyboard))
         self.tap.delegate = self
@@ -124,6 +130,32 @@ class ViewController: UIViewController,UITextFieldDelegate,UIGestureRecognizerDe
                                    animations: {
                                     button.transform = CGAffineTransformIdentity
             }, completion: nil)
+    }
+    
+    func networkStatusChanged(notification: NSNotification) {
+        let userInfo = notification.userInfo
+        print(userInfo)
+        
+        let status = Reach().connectionStatus()
+        print(status)
+        
+        switch status {
+        case .Unknown, .Offline:
+            print("Not connected")
+            let alert = UIAlertController(title: "Message", message: "Please Connect to Internet", preferredStyle: UIAlertControllerStyle.Alert)
+            self.presentViewController(alert, animated: true, completion: nil)
+            
+        case .Online(.WWAN):
+            print("Connected via WWAN")
+            self.dismissViewControllerAnimated(false, completion: nil)
+            self.jsonHandler()
+            
+            
+        case .Online(.WiFi):
+            print("Connected via WiFi")
+            self.dismissViewControllerAnimated(false, completion: nil)
+            self.jsonHandler()
+        }
     }
     
     //JSON Handler
