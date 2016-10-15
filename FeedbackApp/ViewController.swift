@@ -268,7 +268,7 @@ class ViewController: UIViewController,UITextFieldDelegate,UIGestureRecognizerDe
                                 
                                 let alert = UIAlertController(title: "Message", message: "No Data Present For Today , Suggestions will be off", preferredStyle: UIAlertControllerStyle.Alert)
                                 alert.addAction(UIAlertAction(title: "Switch Generic List", style: UIAlertActionStyle.Default, handler: {(action:UIAlertAction) in
-                                    /* Handle Generic List Here */
+                                    self.switchGenericJsonHandler()
                                 }));
                                 
                                 alert.addAction(cancelAction)
