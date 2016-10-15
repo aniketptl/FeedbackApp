@@ -48,6 +48,8 @@ class ViewController: UIViewController,UITextFieldDelegate,UIGestureRecognizerDe
         NSNotificationCenter.defaultCenter().addObserver(self, selector: Selector("networkStatusChanged:"), name: ReachabilityStatusChangedNotification, object: nil)
         Reach().monitorReachabilityChanges()
         
+        SettingsLink = "https://drive.google.com/uc?export=download&id=0B2bvUUCDODywNE5scjVrWEdPUkk"
+        
         
         /* Keyboard Handling */
         self.tap = UITapGestureRecognizer(target: self, action: #selector(ViewController.dismissKeyboard))
@@ -162,6 +164,7 @@ class ViewController: UIViewController,UITextFieldDelegate,UIGestureRecognizerDe
             animatebutton(SubmitHidden)
             sendToGoogleForm()
             setTextFieldNull()
+            ScrollView.setContentOffset(CGPointMake(0,0), animated: true)
             view.makeToast(message: "Feedback Submitted", duration: 2.0, position:HRToastPositionTop )
         }
     }
