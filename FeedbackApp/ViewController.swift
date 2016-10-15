@@ -51,6 +51,19 @@ class ViewController: UIViewController {
     @IBAction func submitHidden(sender: AnyObject) {
     }
     
+    func animatebutton(button:UIButton)
+    {
+        button.transform = CGAffineTransformMakeScale(0.6, 0.6)
+        UIView.animateWithDuration(0.5,
+                                   delay: 0,
+                                   usingSpringWithDamping: 2.2,
+                                   initialSpringVelocity: 0.0,
+                                   options: UIViewAnimationOptions.AllowUserInteraction,
+                                   animations: {
+                                    button.transform = CGAffineTransformIdentity
+            }, completion: nil)
+    }
+    
     //JSON Handler
     func jsonHandler()
     {
