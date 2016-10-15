@@ -8,6 +8,7 @@
 
 import Foundation
 import UIKit
+import Kingfisher
 
 class ViewCloudController: UIViewController {
     
@@ -143,6 +144,84 @@ class ViewCloudController: UIViewController {
             self.cloud6.alpha = 0.0})
         
     }
+    
+    
+    //JSON Handler
+    func jsonHandler()
+    {
+        // Do any additional setup after loading the view, typically from a nib.
+        //URL of JSON
+        let urlAsString = self.testomonialLink
+        ///"https://drive.google.com/uc?export=download&id=0B2bvUUCDODywY1VRZDF3X0VQSHc"
+        let url = NSURL(string: urlAsString)!
+        let urlSession = NSURLSession.sharedSession()
+        
+        
+        let jsonQuery = urlSession.dataTaskWithURL(url, completionHandler: { data, response, error -> Void in
+            do {
+                if let jsonDate = data,let jsonResult = try NSJSONSerialization.JSONObjectWithData(jsonDate, options: [NSJSONReadingOptions.AllowFragments]) as? NSDictionary {
+                    
+                    
+                    //Debug JSON Result
+                    print(jsonResult["cloud1"])
+                    //Debug JSON Result END
+                    
+                    //Get Result into Seperate Arrays
+                    
+                    //Cloud1
+                    let cloud1quote=jsonResult["cloud1"]?.valueForKey("quote") as? String
+                    let cloud1img=jsonResult["cloud1"]?.valueForKey("img") as? String
+                    
+                    let cloud2quote=jsonResult["cloud2"]?.valueForKey("quote") as? String
+                    let cloud2img=jsonResult["cloud2"]?.valueForKey("img") as? String
+                    
+                    let cloud3quote=jsonResult["cloud3"]?.valueForKey("quote") as? String
+                    let cloud3img=jsonResult["cloud3"]?.valueForKey("img") as? String
+                    
+                    let cloud4quote=jsonResult["cloud4"]?.valueForKey("quote") as? String
+                    let cloud4img=jsonResult["cloud4"]?.valueForKey("img") as? String
+                    
+                    let cloud5quote=jsonResult["cloud5"]?.valueForKey("quote") as? String
+                    let cloud5img=jsonResult["cloud5"]?.valueForKey("img") as? String
+                    
+                    let cloud6quote=jsonResult["cloud6"]?.valueForKey("quote") as? String
+                    let cloud6img=jsonResult["cloud6"]?.valueForKey("img") as? String
+                    
+                    
+                    
+                    let priority = DISPATCH_QUEUE_PRIORITY_DEFAULT
+                    dispatch_async(dispatch_get_global_queue(priority, 0)) {
+                        
+                        dispatch_async(dispatch_get_main_queue()) {
+                            
+                            self.cloud1txt.text = cloud1quote
+                            self.cloud2txt.text = cloud2quote
+                            self.cloud3txt.text = cloud3quote
+                            self.cloud4txt.text = cloud4quote
+                            self.cloud5txt.text = cloud5quote
+                            self.cloud6txt.text = cloud6quote
+                            
+                            self.cloud1av.kf_setImageWithURL(NSURL(string: cloud1img!)!)
+                            self.cloud2av.kf_setImageWithURL(NSURL(string: cloud2img!)!)
+                            self.cloud3av.kf_setImageWithURL(NSURL(string: cloud3img!)!)
+                            self.cloud4av.kf_setImageWithURL(NSURL(string: cloud4img!)!)
+                            self.cloud5av.kf_setImageWithURL(NSURL(string: cloud5img!)!)
+                            self.cloud6av.kf_setImageWithURL(NSURL(string: cloud6img!)!)
+                            
+                        }
+                    }
+                    
+                }
+            } catch let error as NSError {
+                print(error)
+            }
+            
+        })
+        jsonQuery.resume()
+        
+    }
+    //JSON Handler
+
     
     func animateTheClouds(cloud : UIView) {
         
