@@ -8,7 +8,7 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+class ViewController: UIViewController,UITextFieldDelegate,UIGestureRecognizerDelegate{
     
     @IBOutlet weak var ScrollView: UIScrollView!
 
@@ -40,13 +40,18 @@ class ViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        /* Keyboard Handling */
+        self.tap = UITapGestureRecognizer(target: self, action: #selector(ViewController.dismissKeyboard))
+        self.tap.delegate = self
+        self.view.addGestureRecognizer(self.tap)
     
     }
     
     override func viewWillAppear(animated: Bool) {
         self.navigationController?.setNavigationBarHidden(true, animated: animated)
         self.settingsJsonHandler()
-        submitHidden.alpha = 0.0
+        SubmitHidden.alpha = 0.0
     }
     
     override func viewWillDisappear(animated: Bool) {
@@ -93,6 +98,11 @@ class ViewController: UIViewController {
             setTextFieldNull()
             view.makeToast(message: "Feedback Submitted", duration: 2.0, position:HRToastPositionTop )
         }
+    }
+    
+    func dismissKeyboard()
+    {
+        self.view.endEditing(true)
     }
     
     func setTextFieldNull()
