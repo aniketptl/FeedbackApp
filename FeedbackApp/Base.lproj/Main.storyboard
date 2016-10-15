@@ -69,6 +69,9 @@
                                         <state key="normal" title="Submit">
                                             <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                         </state>
+                                        <connections>
+                                            <action selector="submit:" destination="2fh-Fz-abV" eventType="touchUpInside" id="nAx-be-P92"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0PC-xT-yHL">
                                         <rect key="frame" x="830" y="654" width="161" height="95"/>
@@ -80,6 +83,9 @@
                                         <state key="normal" title="Submit">
                                             <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                         </state>
+                                        <connections>
+                                            <action selector="submitHidden:" destination="2fh-Fz-abV" eventType="touchUpInside" id="rf8-bn-HWC"/>
+                                        </connections>
                                     </button>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Feedback" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="biJ-7X-4jy">
                                         <rect key="frame" x="26" y="68" width="143" height="32"/>
@@ -118,7 +124,7 @@
                         <outlet property="ClientList" destination="DTF-Go-pGQ" id="g2Z-Ky-acb"/>
                         <outlet property="Comments" destination="hdZ-op-PH3" id="dt4-7f-y0E"/>
                         <outlet property="CompanyList" destination="TJg-ra-xxb" id="MWd-pW-eMH"/>
-                        <outlet property="ScrollView" destination="BFg-mI-Se9" id="Oap-vf-70e"/>
+                        <outlet property="ScrollView" destination="BFg-mI-Se9" id="2Jf-WT-Z4d"/>
                         <outlet property="Submit" destination="9bF-0R-etq" id="KP3-b8-Qjp"/>
                         <outlet property="SubmitHidden" destination="xzT-uk-DnK" id="G4L-eI-GK0"/>
                         <outlet property="indicator" destination="oLc-CN-OvF" id="kPt-gL-6QZ"/>
