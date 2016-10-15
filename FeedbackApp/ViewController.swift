@@ -65,9 +65,41 @@ class ViewController: UIViewController {
     }
 
     @IBAction func submit(sender: AnyObject) {
+        
+        if ((ClientList.text?.isEmpty) != false){
+            view.makeToast(message: "Please Enter Your Name")
+        }
+        else
+        {
+            animatebutton(Submit)
+            sendToGoogleForm()
+            setTextFieldNull()
+            view.makeToast(message: "Feedback Submitted")
+        }
+
     }
     @IBAction func submitHidden(sender: AnyObject) {
+        
+        if ((ClientList.text?.isEmpty) != false)
+        {
+            view.makeToast(message: "Please Enter Your Name",duration:2.0,position:HRToastPositionTop)
+        }
+        else
+        {
+            animatebutton(SubmitHidden)
+            sendToGoogleForm()
+            setTextFieldNull()
+            view.makeToast(message: "Feedback Submitted", duration: 2.0, position:HRToastPositionTop )
+        }
     }
+    
+    func setTextFieldNull()
+    {
+        ClientList.text=nil;
+        CompanyList.text=nil;
+        Comments.text=nil;
+    }
+    
     
     func animatebutton(button:UIButton)
     {
