@@ -412,7 +412,7 @@
         <!--ViewPasswordController-->
         <scene sceneID="iSM-PF-QIz">
             <objects>
-                <viewController storyboardIdentifier="ViewPasswordController" automaticallyAdjustsScrollViewInsets="NO" id="T2P-M9-w0h" userLabel="ViewPasswordController" customClass="ViewPasswordController" customModule="TietoFeedback" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="ViewPasswordController" automaticallyAdjustsScrollViewInsets="NO" id="T2P-M9-w0h" userLabel="ViewPasswordController" customClass="ViewPasswordController" customModule="FeedbackApp" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="voE-Ak-iTq"/>
                         <viewControllerLayoutGuide type="bottom" id="JDh-WB-u8s"/>
