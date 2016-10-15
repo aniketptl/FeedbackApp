@@ -262,6 +262,23 @@ class ViewController: UIViewController {
         
     }
     //Settings Generic JSON
+    
+    //Send To Google Form
+    func sendToGoogleForm()
+    {
+        let url = NSURL(string: googleFormLink)
+        var postData = googleFormNameField + "="+ClientList.text!
+        postData += "&" + googleFormCompanyField + "="+CompanyList.text!
+        postData += "&" + googleFormCommentsField + "="+Comments.text!
+        
+        
+        let request = NSMutableURLRequest(URL: url!)
+        request.HTTPMethod = "POST"
+        request.setValue("application/x-www-form-urlencoded; charset=utf-8", forHTTPHeaderField: "Content-Type")
+        request.HTTPBody = postData.dataUsingEncoding(NSUTF8StringEncoding)
+        _ = NSURLConnection(request: request, delegate: nil, startImmediately: true)
+    }
+    //Send To Google Form End
 
 
 }
