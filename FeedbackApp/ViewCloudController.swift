@@ -156,6 +156,11 @@ class ViewCloudController: UIViewController {
         })
     }
     
+    func handleTapGesture(tapGestureRecognizer: UITapGestureRecognizer) {
+        NSLog("3 tapped")
+        settings.hidden = false
+    }
+    
 
 }
 
