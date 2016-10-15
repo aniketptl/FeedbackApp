@@ -65,6 +65,9 @@ class ViewController: UIViewController,UITextFieldDelegate,UIGestureRecognizerDe
             
         case .Online(.WiFi):
             print("Connected via WiFi")
+            dispatch_async(dispatch_get_global_queue(QOS_CLASS_USER_INTERACTIVE, 0), {
+                self.jsonHandler()
+            })
             
         }
 
