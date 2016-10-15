@@ -36,6 +36,7 @@ class ViewController: UIViewController {
     private var todayStringDate:String = ""
     private var urlAsString : String!
     private var jsonSettings:NSDictionary = [:]
+    @IBOutlet weak var indicator: activityIndicator!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -48,6 +49,15 @@ class ViewController: UIViewController {
     
     override func viewWillDisappear(animated: Bool) {
         self.navigationController?.setNavigationBarHidden(false, animated: animated)
+    }
+    
+    override func viewDidAppear(animated: Bool) {
+        
+        if(isViewLoaded())
+        {
+            indicator.hidesWhenCompleted=true;
+            indicator.completeLoading(true)
+        }
     }
 
     override func didReceiveMemoryWarning() {
@@ -261,7 +271,96 @@ class ViewController: UIViewController {
         print(tartime)
         
     }
-    //Settings Generic JSON
+    
+    //Switch Generic JSON
+    func switchGenericJsonHandler()
+    {
+        
+        indicator.startLoading();
+        
+        // Do any additional setup after loading the view, typically from a nib.
+        //URL of JSON
+        
+        print("Generitc List")
+        urlAsString = GenericListLink;
+        
+        let url = NSURL(string: urlAsString)!
+        let urlSession = NSURLSession.sharedSession()
+        
+        let jsonQuery = urlSession.dataTaskWithURL(url, completionHandler: { data, response, error -> Void in
+            do {
+                if let jsonDate = data,let jsonResult = try NSJSONSerialization.JSONObjectWithData(jsonDate, options: [NSJSONReadingOptions.AllowFragments]) as? NSDictionary {
+                    
+                    print(self.urlAsString)
+                    
+                    //Debug JSON Result
+                    print(jsonResult)
+                    //Debug JSON Result END
+                    
+                    //Get Result into Seperate Arrays
+                    let keys=jsonResult.allKeys as? [String];
+                    let values=jsonResult.allValues as? [String];
+                    
+                    
+                    if(keys?.isEmpty ?? true && values?.isEmpty ?? true)
+                    {
+                        print("No Generic Data for today")
+                        
+                        let cancelAction = UIAlertAction(title: "Cancel", style: UIAlertActionStyle.Cancel) {
+                            UIAlertAction in
+                            NSLog("Cancel Pressed")
+                        }
+                        
+                        
+                        dispatch_async(dispatch_get_main_queue()) {
+                            
+                            let alert = UIAlertController(title: "Message", message: "Generic List Doesn't Have Data or Check Internet", preferredStyle: UIAlertControllerStyle.Alert)
+                            alert.addAction(cancelAction)
+                            self.presentViewController(alert, animated: true, completion: nil)
+                            
+                        }
+                        
+                    }
+                    else
+                    {
+                        //Get Unique Values to Avoid Repeatation
+                        let uniqueValues = Array(Set(values!))
+                        
+                        //Set the List
+                        self.ClientList.filterStrings(keys!)
+                        self.CompanyList.filterStrings(uniqueValues)
+                        
+                        //List Selection Handler
+                        //Handle List
+                        
+                        self.ClientList.itemSelectionHandler = {item in
+                            let title = item.title
+                            print("Title Name of List = "+title)
+                            self.ClientList.text=title
+                            self.CompanyList.text = jsonResult.valueForKey(title) as? String
+                            self.ScrollView.setContentOffset(CGPointMake(0,230), animated: true)
+                            
+                        }
+                        
+                        self.CompanyList.itemSelectionHandler = {item in
+                            let title = item.title
+                            print("Title Name of Company = "+title)
+                            self.CompanyList.text=title
+                        }
+                    }
+                    
+                }
+            } catch let error as NSError {
+                print(error)
+            }
+            
+        })
+        jsonQuery.resume()
+        
+        indicator.completeLoading(true)
+    }
+    //END Switch Generic JSON
+
     
     //Send To Google Form
     func sendToGoogleForm()

@@ -127,7 +127,7 @@
                         <outlet property="ScrollView" destination="BFg-mI-Se9" id="2Jf-WT-Z4d"/>
                         <outlet property="Submit" destination="9bF-0R-etq" id="KP3-b8-Qjp"/>
                         <outlet property="SubmitHidden" destination="xzT-uk-DnK" id="G4L-eI-GK0"/>
-                        <outlet property="indicator" destination="oLc-CN-OvF" id="kPt-gL-6QZ"/>
+                        <outlet property="indicator" destination="oLc-CN-OvF" id="5m2-Vf-YJP"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="I9k-s3-STe" sceneMemberID="firstResponder"/>
