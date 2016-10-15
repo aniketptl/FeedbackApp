@@ -38,6 +38,8 @@ class ViewController: UIViewController,UITextFieldDelegate,UIGestureRecognizerDe
     private var jsonSettings:NSDictionary = [:]
     @IBOutlet weak var indicator: activityIndicator!
     
+     var commentSuggestions : [String] = ["Excellent","Loved it","Great Work","It Sucks","Need Improvement","Good Luck","Best","Awesome :)","Expected Something More :("]
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -70,6 +72,11 @@ class ViewController: UIViewController,UITextFieldDelegate,UIGestureRecognizerDe
             })
             
         }
+        
+        /* In this it assigns the suggestions from the array and use that
+         as a automcomplete text */
+        Comments.suggestions=commentSuggestions;
+
 
     
     }
