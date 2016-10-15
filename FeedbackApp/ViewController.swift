@@ -35,6 +35,7 @@ class ViewController: UIViewController {
     private var tap: UITapGestureRecognizer!
     private var todayStringDate:String = ""
     private var urlAsString : String!
+    private var jsonSettings:NSDictionary = [:]
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -148,6 +149,98 @@ class ViewController: UIViewController {
         
     }
     //JSON Handler
+    
+    //Settings Generic JSON
+    func settingsJsonHandler()
+    {
+        // Do any additional setup after loading the view, typically from a nib.
+        //URL of JSON
+        
+        
+        
+        let startime = NSDate()
+        print(startime)
+        
+        let semaphore = dispatch_semaphore_create(0)
+        self.urlAsString = self.SettingsLink
+        
+        let url = NSURL(string: self.urlAsString)!
+        let urlSession = NSURLSession.sharedSession()
+        
+        
+        let jsonQuery = urlSession.dataTaskWithURL(url, completionHandler: { data, response, error -> Void in
+            do {
+                if let jsonDate = data,let jsonResult = try NSJSONSerialization.JSONObjectWithData(jsonDate, options: [NSJSONReadingOptions.AllowFragments]) as? NSDictionary {
+                    
+                    print(self.urlAsString)
+                    
+                    
+                    //Debug JSON Result
+                    print("Settings")
+                    print(jsonResult)
+                    //Debug JSON Result END
+                    
+                    self.jsonSettings=jsonResult;
+                    
+                    //Get Result into Seperate Arrays
+                    let keys=jsonResult.allKeys as? [String];
+                    let values=jsonResult.allValues as? [String];
+                    
+                    
+                    if(keys?.isEmpty ?? true && values?.isEmpty ?? true)
+                    {
+                        print("No Generic Data for today")
+                        
+                        dispatch_async(dispatch_get_main_queue()) {
+                            
+                            let cancelAction = UIAlertAction(title: "Cancel", style: UIAlertActionStyle.Cancel) {
+                                UIAlertAction in
+                                NSLog("Cancel Pressed")
+                            }
+                            
+                            let alert = UIAlertController(title: "Message", message: "Settings JSON Does't Exist or Internet is not working Please check Link", preferredStyle: UIAlertControllerStyle.Alert)
+                            
+                            alert.addAction(cancelAction)
+                            self.presentViewController(alert, animated: true, completion: nil)
+                            
+                        }
+                        
+                    }
+                    else
+                    {
+                        let defaults = NSUserDefaults.standardUserDefaults()
+                        
+                        //Set Lists Link
+                        self.GenericListLink = jsonResult.valueForKey("GenericListLink") as? String
+                        self.DateListLink = jsonResult.valueForKey("DateListLink") as? String
+                        
+                        //Set Google Form Link
+                        self.googleFormLink = jsonResult.valueForKey("GoogleFormLink") as? String
+                        self.googleFormNameField = jsonResult.valueForKey("GoogleFormNameField") as? String
+                        self.googleFormCompanyField = jsonResult.valueForKey("GoogleFormCompanyField") as? String
+                        self.googleFormCommentsField = jsonResult.valueForKey("GoogleFormCommentsField")as? String
+                        
+                        
+                        //Put into Default Settings Object to use it anywhere
+                        defaults.setObject(self.jsonSettings, forKey:"jsonSettings" )
+                    }
+                    
+                }
+            } catch let error as NSError {
+                print(error)
+            }
+            dispatch_semaphore_signal(semaphore)
+            
+        })
+        jsonQuery.resume()
+        
+        dispatch_semaphore_wait(semaphore, DISPATCH_TIME_FOREVER)
+        
+        let tartime = NSDate()
+        print(tartime)
+        
+    }
+    //Settings Generic JSON
 
 
 }
