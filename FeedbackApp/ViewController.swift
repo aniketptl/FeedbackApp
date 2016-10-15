@@ -45,6 +45,8 @@ class ViewController: UIViewController {
     
     override func viewWillAppear(animated: Bool) {
         self.navigationController?.setNavigationBarHidden(true, animated: animated)
+        self.settingsJsonHandler()
+        submitHidden.alpha = 0.0
     }
     
     override func viewWillDisappear(animated: Bool) {
