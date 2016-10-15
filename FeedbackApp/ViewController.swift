@@ -456,7 +456,15 @@ class ViewController: UIViewController,UITextFieldDelegate,UIGestureRecognizerDe
     }
     
     func textFieldDidEndEditing(textField: UITextField) {
-        <#code#>
+        
+        ScrollView.setContentOffset(CGPointMake(0,0), animated: true)
+        
+        if (textField == Comments) {
+            UIView.animateWithDuration(0.3, delay: 0.0, options: UIViewAnimationOptions.CurveLinear, animations: {
+                self.SubmitHidden.alpha = 0.0
+                }, completion: nil)
+            Submit.alpha = 1.0
+        }
     }
 
 
