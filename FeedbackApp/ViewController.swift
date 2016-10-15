@@ -51,6 +51,23 @@ class ViewController: UIViewController,UITextFieldDelegate,UIGestureRecognizerDe
         self.tap = UITapGestureRecognizer(target: self, action: #selector(ViewController.dismissKeyboard))
         self.tap.delegate = self
         self.view.addGestureRecognizer(self.tap)
+        
+        switch status {
+        case .Unknown, .Offline:
+            print("Not connected")
+            let alert = UIAlertController(title: "Message", message: "Please Connect to Internet", preferredStyle: UIAlertControllerStyle.Alert)
+            self.presentViewController(alert, animated: true, completion: nil)
+            
+            
+        case .Online(.WWAN):
+            print("Connected via WWAN")
+            dispatch_async(dispatch_get_global_queue(QOS_CLASS_USER_INTERACTIVE, 0), {self.jsonHandler()})
+            
+        case .Online(.WiFi):
+            print("Connected via WiFi")
+            
+        }
+
     
     }
     
