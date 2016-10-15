@@ -69,10 +69,48 @@ class ViewCloudController: UIViewController {
     
     override func viewDidAppear(animated: Bool) {
         
-        //Getting Testomonial Link
+        /* Getting Testomonial Link */
         let defaults = NSUserDefaults.standardUserDefaults()
         let jsonSettings = defaults.objectForKey("jsonSettings") as? NSDictionary
         self.testomonialLink = jsonSettings?.valueForKey("TestomonialCloudLink") as? String
+        
+        cloud1.transform = CGAffineTransformMakeScale(0.01, 0.01)
+        cloud2.transform = CGAffineTransformMakeScale(0.01, 0.01)
+        cloud3.transform = CGAffineTransformMakeScale(0.01, 0.01)
+        cloud4.transform = CGAffineTransformMakeScale(0.01, 0.01)
+        cloud5.transform = CGAffineTransformMakeScale(0.01, 0.01)
+        cloud6.transform = CGAffineTransformMakeScale(0.01, 0.01)
+        
+        UIView.animateWithDuration(0.5, delay: 0.6, options: UIViewAnimationOptions.CurveEaseOut, animations: {
+            self.cloud1.alpha = 1.0
+            self.cloud1.transform = CGAffineTransformIdentity
+            }, completion: nil)
+        
+        UIView.animateWithDuration(0.5, delay: 0.8, options: [], animations: {
+            self.cloud2.alpha = 1.0
+            self.cloud2.transform = CGAffineTransformIdentity
+            }, completion: nil)
+        
+        UIView.animateWithDuration(0.5, delay: 1.0, options: [], animations: {
+            self.cloud3.alpha = 1.0
+            self.cloud3.transform = CGAffineTransformIdentity
+            }, completion: nil)
+        
+        UIView.animateWithDuration(0.5, delay: 1.2, options: [], animations: {
+            self.cloud4.alpha = 1.0
+            self.cloud4.transform = CGAffineTransformIdentity
+            }, completion: nil)
+        
+        UIView.animateWithDuration(0.5, delay: 1.6, options: [], animations: {
+            self.cloud5.alpha = 1.0
+            self.cloud5.transform = CGAffineTransformIdentity
+            }, completion: nil)
+        
+        UIView.animateWithDuration(0.5, delay: 1.9, options: [], animations: {
+            self.cloud6.alpha = 1.0
+            self.cloud6.transform = CGAffineTransformIdentity
+            }, completion: nil)
+
 
     }
 
